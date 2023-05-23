@@ -1,8 +1,8 @@
 /*
  * @Author: Libra 916196375@qq.com
  * @Date: 2023-05-21 21:43:57
- * @LastEditors: liuhongbo 916196375@qq.com
- * @LastEditTime: 2023-05-23 00:39:38
+ * @LastEditors: liuhongbo liuhongbo@dip-ai.com
+ * @LastEditTime: 2023-05-23 14:33:35
  * @FilePath: \signInPlug\index.js
  * @Description: 一键签到脚本
  */
@@ -12,6 +12,7 @@ import { signInJueJin } from "./juejin";
 import { signInQqMusic } from "./qqMusic";
 import { signInWuai } from "./wuai";
 import { signInAliyun } from "./aliyun";
+import { signInXiaopozhan } from "./xiaopozhan";
 
 //需要使用的包文件
 const schedule = require("node-schedule");
@@ -66,6 +67,9 @@ export const pushMsg = async (title: string, content: string) => {
 //定时触发任务
 const signTask = () => {
     //每天在6:00-6:10随机签到
+    // 解释一下这个定时器的时间格式：秒 分 时 日 月 周几
+    // 改成执行两次，防止签到失败
+    // 你帮我写
     schedule.scheduleJob("0 0 6 * * *", () => {
         setTimeout(() => {
             signInJueJin(); // 掘金签到
@@ -75,6 +79,23 @@ const signTask = () => {
     })
 }
 
+// 定时触发任务2
+const signTask2 = () => {
+    //每天在21:00-21:10随机签到
+    schedule.scheduleJob("0 0 21 * * *", () => {
+        setTimeout(() => {
+            signInJueJin(); // 掘金签到
+            signInQqMusic() // QQ音乐时长
+            signInAliyun() // 阿里云签到
+        }, Math.random() * 10 * 60 * 1000)
+    })
+}
+
+
+
 //开始执行任务
 console.log(`开始执行任务-${getNowTime('toLocaleString')}`);
 signTask()
+signTask2()
+
+signInXiaopozhan()
