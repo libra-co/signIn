@@ -1,8 +1,8 @@
 /*
  * @Author: Libra 916196375@qq.com
  * @Date: 2023-05-21 21:43:57
- * @LastEditors: liuhongbo liuhongbo@dip-ai.com
- * @LastEditTime: 2023-05-23 14:33:35
+ * @LastEditors: liuhongbo 916196375@qq.com
+ * @LastEditTime: 2023-06-06 21:57:10
  * @FilePath: \signInPlug\index.js
  * @Description: 一键签到脚本
  */
@@ -12,7 +12,6 @@ import { signInJueJin } from "./juejin";
 import { signInQqMusic } from "./qqMusic";
 import { signInWuai } from "./wuai";
 import { signInAliyun } from "./aliyun";
-import { signInXiaopozhan } from "./xiaopozhan";
 
 //需要使用的包文件
 const schedule = require("node-schedule");
@@ -97,5 +96,3 @@ const signTask2 = () => {
 console.log(`开始执行任务-${getNowTime('toLocaleString')}`);
 signTask()
 signTask2()
-
-signInXiaopozhan()

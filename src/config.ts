@@ -1,8 +1,8 @@
 /*
  * @Author: libra 916196375@qq.com
  * @Date: 2023-05-21 21:44:09
- * @LastEditors: liuhongbo liuhongbo@dip-ai.com
- * @LastEditTime: 2023-05-23 14:23:01
+ * @LastEditors: liuhongbo 916196375@qq.com
+ * @LastEditTime: 2023-06-06 21:47:43
  * @FilePath: \signInPlug\config.js
  * @Description: 配置项
  */
@@ -59,20 +59,6 @@ module.exports = {
       'Host': 'member.aliyundrive.com',
       'Connection': 'keep-alive'
     },
-  },
-  xiaoPoZhan: {
-    username: '916196375',
-    password: '916196375',
-    loginInUrl: 'https://xiaopz.top/php/x.php?_rx-s=mobile',
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
-      'Accept': '*/*',
-      'Host': 'xiaopz.top',
-      'Connection': 'keep-alive',
-      'Content-Type': 'text/html; charset=UTF-8',
-    },
-    signInUrl: 'https://xiaopz.top/php/x.php?_rx-s=mobile',
-    
   },
   //消息推送相关参数 关注pushplus微信公众号可以获得一对一推送的调用参数，不是推广
   pushPlus: {
